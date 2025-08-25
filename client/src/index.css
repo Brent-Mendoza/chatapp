@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --comic: "ThyFont", sans-serif;
+  font-family: var(--comic);
+}
+
+@theme inline {
+  --font-comic: var(--comic);
+}
+
+@font-face {
+  font-family: "ThyFont";
+  src: url("./assets/fonts/Comic_Neue/ComicNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ThyFont";
+  src: url("./assets/fonts/Comic_Neue/ComicNeue-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
