@@ -89,7 +89,7 @@ export default function Chat() {
       <section className="max-[1380px]:flex-1 max-[1380px]:w-full max-[1380px]:rounded-none max-[1500px]:w-[90vw] h-[70vh] w-[70vw] border rounded-xl flex">
         <div className="flex-1 flex flex-col relative min-h-0">
           <div className="flex-1 flex flex-col min-h-0">
-            <div className="p-4 border-b flex items-center gap-5 bg-green-300 rounded-t-xl">
+            <div className="p-4 border-b flex items-center gap-5 bg-green-300 rounded-t-xl max-[1380px]:rounded-none">
               <h2 className="text-4xl font-semibold">Chat</h2>
             </div>
             {isLoading && (
@@ -116,7 +116,7 @@ export default function Chat() {
                       {m.sender?.username || "Unknown"}
                     </p>
                     <div
-                      className={`max-w-[20vw] break-words  border rounded-xl px-3 py-2 ${
+                      className={`max-w-[20vw] max-lg:max-w-[50vw] break-words  border rounded-xl px-3 py-2 ${
                         m.sender?._id?.toString() ===
                         user?.user?.userId?.toString()
                           ? "bg-white"
