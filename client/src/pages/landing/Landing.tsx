@@ -63,9 +63,17 @@ export default function Landing() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="p-4 px-10 text-2xl self-end bg-green-300 rounded-[100px] cursor-pointer hover:bg-green-500 hover:scale-105 duration-200"
+            className={`p-4 px-10 text-2xl self-end  rounded-[100px]  ${
+              isSubmitting
+                ? "bg-green-900 cursor-not-allowed"
+                : "cursor-pointer bg-green-300 hover:bg-green-500 hover:scale-105 duration-200"
+            } `}
           >
-            Start!
+            {isSubmitting ? (
+              <span className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-300"></span>
+            ) : (
+              "Start!"
+            )}
           </button>
         </form>
       </section>
