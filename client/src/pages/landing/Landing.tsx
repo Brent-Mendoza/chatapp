@@ -70,7 +70,7 @@ export default function Landing() {
             } `}
           >
             {isSubmitting ? (
-              <span className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-300"></span>
+              <span className="animate-spin h-8 w-8 rounded-full border-4 border-green-200 border-t-transparent"></span>
             ) : (
               "Start!"
             )}
